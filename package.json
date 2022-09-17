@@ -1,7 +1,24 @@
 {
   "name": "ultime-modal",
+  "description": "Two test React components",
+  "author": "ultimecreation",
+  "keywords": [
+    "react",
+    "components",
+    "ui"
+  ],
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jawblia/npm-test.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -13,9 +30,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build": "rm -rf dist && cross-env NODE_ENV=production babel src/lib --out-dir dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +51,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.1",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.19.1",
+    "cross-env": "^7.0.3",
+    "install": "^0.13.0",
+    "npm": "^8.19.2"
   }
 }
